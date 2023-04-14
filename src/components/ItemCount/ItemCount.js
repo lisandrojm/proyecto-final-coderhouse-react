@@ -17,11 +17,11 @@ const ItemCount = ({ stock, initial, onAdd }) => {
   return (
     <div className="Counter">
       <div className="Controls d-flex justify-content-center align-items-center pb-2">
-        <Button variant="danger" className="rounded fw-bold custom" onClick={decrement}>
+        <Button variant="light" className="rounded fw-bold custom border border-2" onClick={decrement}>
           -
         </Button>
         <h4 className="Number p-3">{quantity}</h4>
-        <Button variant="warning" className="rounded fw-bold custom" onClick={increment}>
+        <Button variant="light" className="rounded fw-bold custom border border-2" onClick={increment}>
           +
         </Button>
       </div>

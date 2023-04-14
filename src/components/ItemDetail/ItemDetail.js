@@ -25,24 +25,28 @@ const ItemDetail = ({ id, name, img, category, description, price, stock }) => {
   return (
     <Card style={{ width: '18rem' }} className="mb-4">
       <Card.Body>
-        <Card.Img variant="top" src={img} className="ps-3 pe-3 pt-3" />
         <div className="d-flex flex-column justify-content-center align-items-start pt-3 pb-2 text-start">
+          <div>
+            <Card.Img variant="top" src={img} className="ps-3 pe-3 pb-3" />
+          </div>
           <div>
             <Card.Title>{name}</Card.Title>
           </div>
           <div>
             <Card.Text>
-              <b>Categoría</b> = {formattedCategory}
+              <b>Categoría: </b>
+              {formattedCategory}
             </Card.Text>
           </div>
           <div>
             <Card.Text>
-              <b>Descripción</b> = {description}
+              <b>Descripción: </b>
+              {description}
             </Card.Text>
           </div>
           <div>
             <Card.Text>
-              <b>Precio</b> = ${price}
+              <b>Precio: </b>${price}
             </Card.Text>
           </div>
         </div>
