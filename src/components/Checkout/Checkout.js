@@ -62,7 +62,7 @@ const Checkout = () => {
         setOrderId(orderAdded.id);
         clearCart();
       } else {
-        console.erro('hay productos que estan fuera de stock');
+        console.error('hay productos que estan fuera de stock');
       }
     } catch (error) {
       console.log(error);

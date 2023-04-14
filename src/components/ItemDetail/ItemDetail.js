@@ -23,50 +23,54 @@ const ItemDetail = ({ id, name, img, category, description, price, stock }) => {
   };
   const formattedCategory = category ? category.charAt(0).toUpperCase() + category.slice(1) : '';
   return (
-    <Card style={{ width: '18rem' }} className="mb-4">
+    <Card style={{ width: '40rem' }} className="ms-4 me-4 mb-4">
       <Card.Body>
-        <div className="d-flex flex-column justify-content-center align-items-start pt-3 pb-2 text-start">
+        <div className="d-flex flex-column flex-lg-row justify-content-center align-items-start pt-3 pb-2 text-start">
           <div>
-            <Card.Img variant="top" src={img} className="ps-3 pe-3 pb-3" />
+            <Card.Img variant="top" src={img} className="p-3" />
           </div>
-          <div>
-            <Card.Title>{name}</Card.Title>
-          </div>
-          <div>
-            <Card.Text>
-              <b>Categoría: </b>
-              {formattedCategory}
-            </Card.Text>
-          </div>
-          <div>
-            <Card.Text>
-              <b>Descripción: </b>
-              {description}
-            </Card.Text>
-          </div>
-          <div>
-            <Card.Text>
-              <b>Precio: </b>${price}
-            </Card.Text>
-          </div>
-        </div>
-        <div>
-          {quantityAdded > 0 ? (
-            <div className="d-flex flex-column gap-3">
-              <Link to="/" className="Option text-decoration-none text-white">
-                <div className="d-grid gap-2">
-                  <Button variant="warning">Más productos</Button>
-                </div>
-              </Link>
-              <Link to="/cart" className="Option text-decoration-none text-white">
-                <div className="d-grid gap-2">
-                  <Button variant="dark">Terminar compra</Button>
-                </div>
-              </Link>
+          <div className="">
+            <div>
+              <Card.Title>{name}</Card.Title>
             </div>
-          ) : (
-            <ItemCount initial={1} stock={stock} onAdd={handleOnAdd} />
-          )}
+            <div>
+              <div>
+                <Card.Text>
+                  <b>Categoría: </b>
+                  {formattedCategory}
+                </Card.Text>
+              </div>
+              <div>
+                <Card.Text>
+                  <b>Descripción: </b>
+                  {description}
+                </Card.Text>
+              </div>
+              <div>
+                <Card.Text>
+                  <b>Precio: </b>${price}
+                </Card.Text>
+              </div>
+            </div>
+            <div>
+              {quantityAdded > 0 ? (
+                <div className="d-flex flex-column gap-3 pt-4">
+                  <Link to="/" className="Option text-decoration-none text-white">
+                    <div className="d-grid gap-2">
+                      <Button variant="warning">Más productos</Button>
+                    </div>
+                  </Link>
+                  <Link to="/cart" className="Option text-decoration-none text-white">
+                    <div className="d-grid gap-2">
+                      <Button variant="dark">Terminar compra</Button>
+                    </div>
+                  </Link>
+                </div>
+              ) : (
+                <ItemCount initial={1} stock={stock} onAdd={handleOnAdd} />
+              )}
+            </div>
+          </div>
         </div>
       </Card.Body>
     </Card>
