@@ -31,42 +31,44 @@ const Cart = () => {
       <div className="pt-3">
         <h3>Carrito</h3>
       </div>
-      <table className="table">
-        <thead className="thead-dark">
-          <tr>
-            <th scope="col">Cantidad</th>
-            <th scope="col">Artículo</th>
-            <th scope="col">Precio</th>
-            <th scope="col">Total</th>
-            <th scope="col"></th>
-          </tr>
-        </thead>
-        <tbody>
-          {cart.map((item) => (
-            <CartItem key={item.id} item={item} />
-          ))}
-        </tbody>
-      </table>
-      <div className="container col-8 col-md-3">
-        <div className="pt-2">
-          <h3>Total: ${total}</h3>
-        </div>
-        <div>
-          <div className="pt-3 d-grid gap-2">
-            <Button variant="danger" onClick={() => clearCart()} className="Button">
-              Limpiar carrito
-            </Button>
+      <div className="container">
+        <table striped bordered hover size="sm" className="table">
+          <thead className="thead-dark">
+            <tr>
+              <th scope="col">Cantidad</th>
+              <th scope="col">Artículo</th>
+              <th scope="col">Precio</th>
+              <th scope="col">Total</th>
+              <th scope="col"></th>
+            </tr>
+          </thead>
+          <tbody>
+            {cart.map((item) => (
+              <CartItem key={item.id} item={item} />
+            ))}
+          </tbody>
+        </table>
+        <div className="container col-8 col-md-3">
+          <div className="pt-2">
+            <h3>Total: ${total}</h3>
           </div>
-          <Link to="/" className="Option text-decoration-none text-white">
+          <div>
             <div className="pt-3 d-grid gap-2">
-              <Button variant="warning">Mas productos</Button>
+              <Button variant="danger" onClick={() => clearCart()} className="Button">
+                Limpiar carrito
+              </Button>
             </div>
-          </Link>
-          <Link to="/checkout" className="Option text-decoration-none text-white">
-            <div className="pt-3 d-grid gap-2 pb-3">
-              <Button variant="dark">Checkout</Button>
-            </div>
-          </Link>
+            <Link to="/" className="Option text-decoration-none text-white">
+              <div className="pt-3 d-grid gap-2">
+                <Button variant="warning">Mas productos</Button>
+              </div>
+            </Link>
+            <Link to="/checkout" className="Option text-decoration-none text-white">
+              <div className="pt-3 d-grid gap-2 pb-3">
+                <Button variant="dark">Checkout</Button>
+              </div>
+            </Link>
+          </div>
         </div>
       </div>
     </div>
