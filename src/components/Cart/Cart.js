@@ -4,6 +4,8 @@ import CartItem from '../CartItem/CartItem';
 import { Link } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 import Table from 'react-bootstrap/Table';
+import EmptyCartWidget from '../EmptyCartWidget/EmptyCartWidget';
+import FullCartWidget from '../FullCartWidget/FullCartWidget';
 
 const Cart = () => {
   const { cart, clearCart, totalQuantity, total } = useContext(CartContext);
@@ -13,7 +15,10 @@ const Cart = () => {
       <div>
         <div className="container col-8 col-md-3">
           <div className="pt-3">
-            <h3>Carrito vacío</h3>
+            <EmptyCartWidget />
+            <div className="pt-1">
+              <h4>Carrito vacío</h4>
+            </div>
           </div>
           <div className="container">
             <Link to="/ " className="Option text-decoration-none text-white">
@@ -30,6 +35,7 @@ const Cart = () => {
   return (
     <div>
       <div className="pt-3">
+        <FullCartWidget />
         <h3>Carrito</h3>
       </div>
       <div className="container">
@@ -66,7 +72,7 @@ const Cart = () => {
             </Link>
             <Link to="/checkout" className="Option text-decoration-none text-white">
               <div className="pt-3 d-grid gap-2 pb-3">
-                <Button variant="dark">Checkout</Button>
+                <Button variant="dark">Comprar</Button>
               </div>
             </Link>
           </div>

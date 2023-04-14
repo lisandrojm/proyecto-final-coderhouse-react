@@ -1,7 +1,10 @@
+import ItemLoading from '../ItemLoading/ItemLoading';
 import { useState, useContext } from 'react';
 import { CartContext } from '../../context/CartContext';
 import { Timestamp, getDocs, collection, query, where, addDoc, writeBatch, documentId } from 'firebase/firestore';
 import { db } from '../../services/firebase/firebaseConfig';
+import { Link } from 'react-router-dom';
+import Button from 'react-bootstrap/Button';
 
 import CheckoutForm from '../CheckoutForm/CheckoutForm';
 
@@ -71,10 +74,35 @@ const Checkout = () => {
     }
   };
   if (loading) {
-    return <h1>Se está generando su orden</h1>;
+    return (
+      <div className="pt-2">
+        <ItemLoading text="Se está generando su orden..." />
+      </div>
+    );
   }
   if (orderId) {
-    return <h1>El id de su orden es: {orderId}</h1>;
+    return (
+      <>
+        <div className="container pt-5 d-flex justify-content-center align-items-center">
+          <div class="card">
+            <div class="card-body">
+              <h3>Gracias por elegirnos!</h3>
+              <h6>La compra se ha realizado exitosamente</h6>
+              <div>
+                <p>
+                  El ID de su orden es: <span className="text-danger">{orderId}</span>
+                </p>
+              </div>
+              <Link to="/" className="Option text-decoration-none text-white">
+                <div className="d-grid gap-2">
+                  <Button variant="warning">Volver a comprar</Button>
+                </div>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </>
+    );
   }
   return (
     <div className="pt-3">

@@ -64,7 +64,7 @@ const products = [
   },
   {
     id: '8',
-    name: 'Mother Gigabyte H410M',
+    name: 'Mother Asrock B550',
     price: 88400,
     category: 'mother',
     img: 'https://compragamer.net/pga/imagenes_publicadas/compragamer_Imganen_general_20376_Mother_Asrock_B550_Phantom_Gaming_ITX_AX_04e00223-grn.jpg',
