@@ -1,5 +1,6 @@
 import { useState } from 'react';
-
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
 const CheckoutForm = ({ onConfirm }) => {
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
@@ -18,24 +19,26 @@ const CheckoutForm = ({ onConfirm }) => {
   };
 
   return (
-    <div className="Container">
-      <form onSubmit={handleConfirm} className="Form">
-        <label className="Label">
-          Nombre
-          <input type="text" className="Input" value={name} onChange={({ target }) => setName(target.value)} />
-        </label>
-        <label className="Label">
-          Telefono
-          <input type="text" className="Input" value={phone} onChange={({ target }) => setPhone(target.value)} />
-        </label>
-        <label className="Label">
-          Email
-          <input type="email" className="Input" value={email} onChange={({ target }) => setEmail(target.value)} />
-        </label>
-        <div>
-          <button type="submit">Crear Orden</button>
+    <div className="container col-lg-5 text-start">
+      <Form onSubmit={handleConfirm}>
+        <Form.Group className="mb-3" controlId="formBasicText">
+          <Form.Label>Nombre</Form.Label>
+          <Form.Control type="text" placeholder="Nombre y Apellido" value={name} onChange={({ target }) => setName(target.value)} />
+        </Form.Group>
+        <Form.Group className="mb-3" controlId="formBasicNumber">
+          <Form.Label>Telefono</Form.Label>
+          <Form.Control type="number" placeholder="1151234567" value={phone} onChange={({ target }) => setPhone(target.value)} />
+        </Form.Group>
+        <Form.Group className="mb-3" controlId="formBasicEmail">
+          <Form.Label>Email</Form.Label>
+          <Form.Control type="email" placeholder="mail@ejemplo.com" value={email} onChange={({ target }) => setEmail(target.value)} />
+        </Form.Group>
+        <div className="pt-3 d-grid gap-2 pb-3">
+          <Button variant="dark" type="submit" disabled={!name || !phone || !email}>
+            Crear Orden
+          </Button>
         </div>
-      </form>
+      </Form>
     </div>
   );
 };

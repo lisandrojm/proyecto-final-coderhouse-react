@@ -77,8 +77,8 @@ const Checkout = () => {
     return <h1>El id de su orden es: {orderId}</h1>;
   }
   return (
-    <div>
-      <h1>Checkout</h1>
+    <div className="pt-3">
+      <h3>Checkout</h3>
       <CheckoutForm onConfirm={createOrder} />
     </div>
   );

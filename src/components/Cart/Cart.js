@@ -3,6 +3,7 @@ import { CartContext } from '../../context/CartContext';
 import CartItem from '../CartItem/CartItem';
 import { Link } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
+import Table from 'react-bootstrap/Table';
 
 const Cart = () => {
   const { cart, clearCart, totalQuantity, total } = useContext(CartContext);
@@ -32,7 +33,7 @@ const Cart = () => {
         <h3>Carrito</h3>
       </div>
       <div className="container">
-        <table striped bordered hover size="sm" className="table">
+        <Table striped bordered hover size="sm">
           <thead className="thead-dark">
             <tr>
               <th scope="col">Cantidad</th>
@@ -47,7 +48,7 @@ const Cart = () => {
               <CartItem key={item.id} item={item} />
             ))}
           </tbody>
-        </table>
+        </Table>
         <div className="container col-8 col-md-3">
           <div className="pt-2">
             <h3>Total: ${total}</h3>
