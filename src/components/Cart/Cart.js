@@ -14,16 +14,16 @@ const Cart = () => {
     return (
       <div>
         <div className="container col-8 col-md-3">
-          <div className="pt-3">
+          <div className="pt-5 mt-3">
             <EmptyCartWidget />
-            <div className="pt-1">
+            <div className="pt-1 text-white">
               <h4>Carrito vacío</h4>
             </div>
           </div>
           <div className="container">
-            <Link to="/ " className="Option text-decoration-none text-white">
+            <Link to="/products " className="Option text-decoration-none">
               <div className="pt-1 d-grid gap-2">
-                <Button variant="warning">Productos</Button>
+                <Button variant="light">Ir a comprar</Button>
               </div>
             </Link>
           </div>
@@ -34,12 +34,12 @@ const Cart = () => {
 
   return (
     <div>
-      <div className="pt-3">
+      <div className="pt-3 pb-2 text-white">
         <FullCartWidget />
         <h3>Carrito</h3>
       </div>
       <div className="container">
-        <Table striped bordered hover size="sm">
+        <Table striped bordered hover size="sm" className="table-dark">
           <thead className="thead-dark">
             <tr>
               <th scope="col">Cantidad</th>
@@ -56,23 +56,23 @@ const Cart = () => {
           </tbody>
         </Table>
         <div className="container col-8 col-md-3">
-          <div className="pt-2">
+          <div className="pt-2 text-white">
             <h3>Total: ${total}</h3>
           </div>
           <div>
             <div className="pt-3 d-grid gap-2">
-              <Button variant="danger" onClick={() => clearCart()} className="Button">
+              <Button variant="outline-danger " onClick={() => clearCart()} className="Button">
                 Limpiar carrito
               </Button>
             </div>
-            <Link to="/" className="Option text-decoration-none text-white">
+            <Link to="/products" className="Option text-decoration-none text-white">
               <div className="pt-3 d-grid gap-2">
-                <Button variant="warning">Mas productos</Button>
+                <Button variant="outline-light">Mas productos</Button>
               </div>
             </Link>
             <Link to="/checkout" className="Option text-decoration-none text-white">
               <div className="pt-3 d-grid gap-2 pb-3">
-                <Button variant="dark">Comprar</Button>
+                <Button variant="light">Comprar</Button>
               </div>
             </Link>
           </div>

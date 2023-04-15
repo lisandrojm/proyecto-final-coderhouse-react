@@ -36,7 +36,7 @@ const NavBar = () => {
         <Container>
           <div className="d-flex align-items-center justify-content-center">
             <div>
-              <Navbar.Brand as={Link} to="/" className="NavBar-brand">
+              <Navbar.Brand as={Link} to="/products" className="NavBar-brand">
                 <img alt="logo" src={logo} width="30" height="30" className="d-inline-block align-top img-fluid " /> Freelo ECOM
               </Navbar.Brand>
             </div>
@@ -65,7 +65,7 @@ const NavBar = () => {
           </Navbar.Collapse>
         </Container>
       </Navbar>
-      {selectedCategory && <h3 className="pt-3">{selectedCategoryText}</h3>}
+      {selectedCategory && <h3 className="pt-3 text-white">{selectedCategoryText}</h3>}
     </>
   );
 };

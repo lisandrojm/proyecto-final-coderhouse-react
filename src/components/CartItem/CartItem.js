@@ -17,7 +17,7 @@ const CartItem = ({ item }) => {
       <td>${item.price}</td>
       <td>${item.quantity * item.price}</td>
       <td>
-        <Button variant="danger" className="rounded fw-bold" onClick={() => deleteProduct()}>
+        <Button variant="outline-danger rounded fw-bold btn-sm m-1 bg-black " onClick={() => deleteProduct()}>
           x
         </Button>
       </td>

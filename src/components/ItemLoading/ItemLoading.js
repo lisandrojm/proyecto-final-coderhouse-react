@@ -5,7 +5,7 @@ const ItemLoading = ({ text }) => (
     <div className="spinner-border text-warning pt-2" role="status">
       <span className="visually-hidden">Loading...</span>
     </div>
-    <div className="pt-1 text-warning">
+    <div className="pt-1 text-white">
       <h5>{text}</h5>
     </div>
   </div>

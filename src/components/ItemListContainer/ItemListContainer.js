@@ -34,7 +34,7 @@ const ItemListContainer = ({ greeting }) => {
   return (
     <div>
       {categoryId === undefined && (
-        <div className="pt-3">
+        <div className="pt-3 text-white">
           <h3>{greeting}</h3>
         </div>
       )}

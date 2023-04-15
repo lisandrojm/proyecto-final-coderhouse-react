@@ -55,9 +55,9 @@ const ItemDetail = ({ id, name, img, category, description, price, stock }) => {
             <div>
               {quantityAdded > 0 ? (
                 <div className="d-flex flex-column gap-3 pt-4">
-                  <Link to="/" className="Option text-decoration-none text-white">
+                  <Link to="/products" className="Option text-decoration-none text-white">
                     <div className="d-grid gap-2">
-                      <Button variant="warning">Más productos</Button>
+                      <Button variant="outline-dark">Más productos</Button>
                     </div>
                   </Link>
                   <Link to="/cart" className="Option text-decoration-none text-white">

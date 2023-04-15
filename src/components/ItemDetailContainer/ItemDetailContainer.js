@@ -34,7 +34,7 @@ const ItemDetailContainer = () => {
 
   return (
     <>
-      <div className="pt-3">
+      <div className="pt-3 text-white">
         <h3>Detalle</h3>
       </div>
       <div className="ItemDetailContainer d-flex justify-content-center mt-2">{loading ? <ItemLoading text="Loading..." /> : <ItemDetail {...product} />}</div>

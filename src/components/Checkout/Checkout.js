@@ -93,9 +93,9 @@ const Checkout = () => {
                   El ID de su orden es: <span className="text-danger">{orderId}</span>
                 </p>
               </div>
-              <Link to="/" className="Option text-decoration-none text-white">
+              <Link to="/products" className="Option text-decoration-none text-white">
                 <div className="d-grid gap-2">
-                  <Button variant="warning">Volver a comprar</Button>
+                  <Button variant="dark">Volver a comprar</Button>
                 </div>
               </Link>
             </div>
@@ -105,7 +105,7 @@ const Checkout = () => {
     );
   }
   return (
-    <div className="pt-3">
+    <div className="pt-3 text-white">
       <h3>Checkout</h3>
       <CheckoutForm onConfirm={createOrder} />
     </div>
