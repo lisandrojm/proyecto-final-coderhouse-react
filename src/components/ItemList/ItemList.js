@@ -13,7 +13,7 @@ const ItemList = ({ products }) => {
     <div className="ListGroup">
       <div className="container">
         {productsGrouped.map((group, index) => (
-          <div key={index} className="row row-cols-1 row-cols-md-3 g-4 ">
+          <div key={index} className="row row-cols-1 row-cols-lg-3 g-4 ">
             {group.map((prod) => (
               <div key={prod.id} className="col d-flex justify-content-center mt-2">
                 <Item {...prod} />
