@@ -75,7 +75,7 @@ const Checkout = () => {
   };
   if (loading) {
     return (
-      <div className="pt-2">
+      <div className="pt-4">
         <ItemLoading text="Se está generando su orden..." />
       </div>
     );
@@ -84,15 +84,20 @@ const Checkout = () => {
     return (
       <>
         <div className="container pt-5 d-flex justify-content-center align-items-center">
-          <div class="card">
-            <div class="card-body">
-              <h3>Gracias por elegirnos!</h3>
+          <div className="card">
+            <div className="card-body">
+              <h3>¡Gracias por elegirnos!</h3>
               <h6>La compra se ha realizado exitosamente</h6>
               <div>
                 <p>
                   El ID de su orden es: <span className="text-danger">{orderId}</span>
                 </p>
               </div>
+              <Link to="/" className="Option text-decoration-none text-white">
+                <div className="d-grid gap-2 pb-3">
+                  <Button variant="outline-dark">Finalizar</Button>
+                </div>
+              </Link>
               <Link to="/products" className="Option text-decoration-none text-white">
                 <div className="d-grid gap-2">
                   <Button variant="dark">Volver a comprar</Button>
