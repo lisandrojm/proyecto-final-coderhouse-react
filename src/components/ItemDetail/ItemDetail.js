@@ -23,7 +23,7 @@ const ItemDetail = ({ id, name, img, category, description, price, stock }) => {
   };
   const formattedCategory = category ? category.charAt(0).toUpperCase() + category.slice(1) : '';
   return (
-    <Card style={{ width: '40rem' }} className="ms-4 me-4 mb-4 card_custom">
+    <Card style={{ width: '40rem' }} className="ms-4 me-4 mb-4">
       <Card.Body>
         <div className="d-flex flex-column flex-lg-row justify-content-center align-items-start pt-3 pb-2 text-start">
           <div>
