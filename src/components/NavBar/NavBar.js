@@ -44,7 +44,7 @@ const NavBar = () => {
               <CartWidget />
             </div>
           </div>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Toggle aria-controls="basic-navbar-nav" className="border-0" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="text-start">
               <Nav.Link as={Link} to={`/category/procesador`} className={({ isActive }) => (isActive ? 'ActionOption' : 'Option')}>
