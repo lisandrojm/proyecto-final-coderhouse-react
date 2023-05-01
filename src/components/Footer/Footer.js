@@ -8,7 +8,7 @@ const Footer = () => (
       <div className="row justify-content-center text-center">
         <div className="col-lg-4 col-md-4">
           <div className="row text-center">
-            <a className="Footer-github" href="https://github.com/lisandrojm" target="blank">
+            <a className="Footer-github" href="https://github.com/lisandrojm/PFMartinez" target="blank">
               <img src={logo} className="img-fluid" alt="logo github" />
             </a>
           </div>
