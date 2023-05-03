@@ -2,13 +2,13 @@ import { initializeApp } from 'firebase/app';
 import { getFirestore } from 'firebase/firestore';
 
 const firebaseConfig = {
-  apiKey: 'AIzaSyCj0tYMtnzkLotuXJKiKJpdo2ICSpuEpAo',
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
   authDomain: 'freelo-ecom.firebaseapp.com',
   projectId: 'freelo-ecom',
   storageBucket: 'freelo-ecom.appspot.com',
-  messagingSenderId: '473945389852',
-  appId: '1:473945389852:web:0229fa887b2bc7ec1e58d9',
-  measurementId: 'G-HH72C6BZCK',
+  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_FIREBASE_APP_ID,
+  measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENT_ID,
 };
 
 const app = initializeApp(firebaseConfig);
