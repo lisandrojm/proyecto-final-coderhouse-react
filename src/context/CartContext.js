@@ -12,6 +12,9 @@ export const CartProvider = ({ children }) => {
   const addItem = (item, quantity) => {
     if (!isInCart(item.id)) {
       setCart((prev) => [...prev, { ...item, quantity }]);
+      toast.success('Producto agregado al carrito', {
+        autoClose: 1500,
+      });
     } else {
       toast.error('El producto ya fue agregado', {
         autoClose: 1500,

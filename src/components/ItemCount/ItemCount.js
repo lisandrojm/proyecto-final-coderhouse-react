@@ -1,5 +1,6 @@
 import './ItemCount.css';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 /* bootstrap_react */
 import Button from 'react-bootstrap/Button';
 
@@ -30,6 +31,11 @@ const ItemCount = ({ stock, initial, onAdd }) => {
           Agregar al carrito
         </Button>
       </div>
+      <Link to="/products" className="Option text-decoration-none text-white">
+        <div className="d-grid gap-2 pt-3">
+          <Button variant="outline-dark">Volver a productos</Button>
+        </div>
+      </Link>
     </div>
   );
 };
