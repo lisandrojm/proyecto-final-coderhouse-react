@@ -16,7 +16,7 @@ export const CartProvider = ({ children }) => {
         autoClose: 1500,
       });
     } else {
-      toast.error('El producto ya fue agregado', {
+      toast.error('Este producto ya fue agregado', {
         autoClose: 1500,
       });
     }

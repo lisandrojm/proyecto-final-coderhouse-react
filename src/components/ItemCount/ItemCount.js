@@ -17,7 +17,7 @@ const ItemCount = ({ stock, initial, onAdd }) => {
 
   return (
     <div className="Counter">
-      <div className="Controls d-flex justify-content-center align-items-center pb-2">
+      <div className="Controls d-flex justify-content-center align-items-center pb-2 ">
         <Button variant="light" className="rounded fw-bold custom border border-2" onClick={decrement}>
           -
         </Button>
