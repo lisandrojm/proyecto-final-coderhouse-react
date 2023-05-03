@@ -1,7 +1,7 @@
 # PFMartinez
 
 Vercel
-https://pf-martinez.vercel.app/products
+https://pf-martinez.vercel.app/
 
 # Getting Started with Create React App
 
