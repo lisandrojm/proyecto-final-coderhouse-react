@@ -6,8 +6,8 @@
   box-shadow: none;
 }
 .nav-item .dropdown-menu {
-  background: #000000;
-  border: 2px solid rgb(215, 215, 215);
+  background: #343a40;
+  border: none;
 }
 
 .nav-item .dropdown-item {
@@ -15,5 +15,5 @@
 }
 
 .nav-item .dropdown-item:hover {
-  background: #ffffff;
+  background: #ffc107;
 }
