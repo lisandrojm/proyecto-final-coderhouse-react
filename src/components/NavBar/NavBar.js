@@ -6,6 +6,7 @@ import CartWidget from '../CartWidget/CartWidget';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import NavDropdown from 'react-bootstrap/NavDropdown';
 import { Link, useLocation } from 'react-router-dom';
 
 const categoryTextMap = {
@@ -32,7 +33,7 @@ const NavBar = () => {
 
   return (
     <>
-      <Navbar bg="dark" variant="dark " expand="lg" className="sticky-top">
+      <Navbar bg="dark" variant="dark" expand="lg" className="sticky-top">
         <Container>
           <div className="d-flex align-items-center justify-content-center">
             <div>
@@ -47,15 +48,17 @@ const NavBar = () => {
           <Navbar.Toggle aria-controls="basic-navbar-nav" className="border-0" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="text-start">
-              <Nav.Link as={Link} to={`/category/procesador`} className={({ isActive }) => (isActive ? 'ActionOption' : 'Option')}>
-                Procesadores
-              </Nav.Link>
-              <Nav.Link as={Link} to={`/category/mother`} className={({ isActive }) => (isActive ? 'ActionOption' : 'Option')}>
-                Mothers
-              </Nav.Link>
-              <Nav.Link as={Link} to={`/category/placa`} className={({ isActive }) => (isActive ? 'ActionOption' : 'Option')}>
-                Placas de video
-              </Nav.Link>
+              <NavDropdown title="Categorías" id="basic-nav-dropdown" className="Option">
+                <NavDropdown.Item as={Link} to={`/category/procesador`} className={({ isActive }) => (isActive ? 'ActionOption' : 'Option')} bg="dark" variant="dark">
+                  Procesadores
+                </NavDropdown.Item>
+                <NavDropdown.Item as={Link} to={`/category/mother`} bg="dark" variant="dark" className={({ isActive }) => (isActive ? 'ActionOption' : 'Option')}>
+                  Mothers
+                </NavDropdown.Item>
+                <NavDropdown.Item as={Link} to={`/category/placa`} bg="dark" variant="dark" className={({ isActive }) => (isActive ? 'ActionOption' : 'Option')}>
+                  Placas de video
+                </NavDropdown.Item>
+              </NavDropdown>
               <div className="text-light d-flex justify-content-start align-items-center ">
                 <div className="d-none d-lg-block">
                   <CartWidget />

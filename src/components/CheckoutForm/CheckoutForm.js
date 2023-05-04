@@ -71,7 +71,7 @@ const CheckoutForm = ({ onConfirm }) => {
         </Form.Group>
         <div className="pt-3 d-grid gap-2 pb-3">
           <Button variant="outline-light" type="submit" disabled={!name || !phone || !email || !confirmEmail}>
-            Crear Orden
+            Realizar compra
           </Button>
         </div>
       </Form>
