@@ -1,75 +1,97 @@
-# PFMartinez
+# <a href="https://pf-martinez.vercel.app/" target="_blank">Freelo ECOM</a>
 
-Vercel
-https://pf-martinez.vercel.app/
+<div>
+  <h3>E-Commerce-React Js</h3>
+  <p>
+    Este proyecto fue creado en el curso de React Js de la carrera Full Stack en <a href="https://www.coderhouse.com/"target="_blank">Coderhouse</a>.
+    <br />
+    <br />
+    <a href="https://pf-martinez.vercel.app/" target="_blank">Link al sitio</a>
+  </p>
+</div>
 
-# Getting Started with Create React App
+## Video Preview
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Tabla de contenidos
 
-## Available Scripts
+- [Acerca del Proyecto](#acerca-del-proyecto)
+- [Estructura del Proyecto.](#estructura-del-proyecto)
+- [Tecnologías aplicadas](#tecnologías-aplicadas)
+- [Instalación](#instalación)
 
-In the project directory, you can run:
+## Acerca del Proyecto
 
-### `npm start`
+- Se trata de un e-commerce de hardware desarrollado en React Js.
+- Cuenta con una navegacion que permite al usuario ingresar, navegar por los productos e ir a sus detalles.
+- Desde el detalle el usuario puede ver la descripción, la foto, el precio y puede ingresar el producto al
+  carrito.
+- Una vez que el carrito tiene al menos un producto, el usuario puede visualizar un listado de la orden y el precio total.
+- Durante el Checkout, al ingresar su nombre, teléfono e e-mail se activa el botón de "realizar compra".
+- Al clickear "realizar compra" se guarda en la base de datos (Firebase) una orden que tiene todos los productos, la fecha y se le da feedback al usuario del número de orden.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Estructura del Proyecto.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Inicio
 
-### `npm test`
+- Al momento de ingresar a la app el usuario visualiza todos los productos disponibles para la compra.
+- El usuario puede acceder a un menú desplegable en la navbar que contiene todas las categorías. Al clickear en una, accede a la lista de productos de la misma visualizando sólamente los productos de esa categoría.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Flow
 
-### `npm run build`
+- Al clickear un ítem del listado, el usuario navega a la ruta /item/:id, donde
+  id es el id del item (generado por **Firebase**), y puede ver la descripción del producto (
+  foto, precio, selector de cantidad).
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Carrito de compras
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- El carrito de compras es accesible durante toda la experiencia y tiene una indicación de la cantidad de items incluidos agregados.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Checkout
 
-### `npm run eject`
+- El checkout contiene una tabla de los items con sus cantidades, el detalle de cada artículo, el precio y el total de la orden.
+- Finalizada la orden, el usuario recibe su **order id** con el **id** del objeto de **Firebase**.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Backend
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- El backend está realizado con **Firebase** y tiene dos colecciones: **items** y **orders**.
+- Firebase/ **items**: Es el catálogo completo. Contiene el link para la foto, el precio unitario, la descripción y la categoría.
+- Firebase/ **orders**: Las órdenes generadas incluyen los productos, las descripciones y los precios al momento de la compra. Las órdenes pueden tener items surtidos y en cada uno se especifica su cantidad.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Tecnologías aplicadas
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Para la construcción del proyecto se utilizaron las siguientes tecnologías:
 
-## Learn More
+- _[React.js](https://reactjs.org/):_ _Construcción de la interface de usuario._
+- _[Create React App](https://create-react-app.dev/):_ _Estructura base del proyecto._
+- _[React Router DOM](https://www.npmjs.com/package/react-router-dom):_ _Navegación de las diferentes secciones._
+- _[React Bootstrap](https://react-bootstrap.github.io/):_ _Estilos._
+- _[React Toastify](https://www.npmjs.com/package/react-toastify/):_ _Mensajes y alertas._
+- _[Firebase](https://firebase.google.com/):_ _Base de datos._
+- _[Vercel](https://vercel.com/):_ _Desplegar la aplicación._
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Instalación
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Pre-requisitos
 
-### Code Splitting
+Debes tener instalado el siguiente software en tu sistema operativo:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- Node
+- npm
 
-### Analyzing the Bundle Size
+### Clonar repositorio
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```bash
+git clone https://github.com/lisandrojm/PFMartinez
+```
 
-### Making a Progressive Web App
+### Instalar las dependencias
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```bash
+npm install
+```
 
-### Advanced Configuration
+### Ejecutar la aplicación
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```bash
+npm start
+```
