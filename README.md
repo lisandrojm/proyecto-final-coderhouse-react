@@ -65,7 +65,7 @@ Para la construcción del proyecto se utilizaron las siguientes tecnologías:
 - _[Create React App](https://create-react-app.dev/):_ _Estructura base del proyecto._
 - _[React Router DOM](https://www.npmjs.com/package/react-router-dom):_ _Navegación de las diferentes secciones._
 - _[React Bootstrap](https://react-bootstrap.github.io/):_ _Estilos._
-- _[React Toastify](https://www.npmjs.com/package/react-toastify/):_ _Mensajes y alertas._
+- _[React Hot Toast](https://www.npmjs.com/package/react-hot-toast/):_ _Mensajes y alertas._
 - _[Firebase](https://firebase.google.com/):_ _Base de datos._
 - _[Vercel](https://vercel.com/):_ _Desplegar la aplicación._
 

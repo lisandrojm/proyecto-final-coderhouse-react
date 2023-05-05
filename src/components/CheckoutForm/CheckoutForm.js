@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import { toast } from 'react-toastify';
+import { toast } from 'react-hot-toast';
 
 const CheckoutForm = ({ onConfirm }) => {
   const [name, setName] = useState('');

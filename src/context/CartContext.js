@@ -1,6 +1,5 @@
 import { createContext, useState, useEffect } from 'react';
-import { toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { toast } from 'react-hot-toast';
 
 export const CartContext = createContext({
   cart: [],
@@ -16,13 +15,9 @@ export const CartProvider = ({ children }) => {
   const addItem = (item, quantity) => {
     if (!isInCart(item.id)) {
       setCart((prev) => [...prev, { ...item, quantity }]);
-      toast.success('Producto agregado al carrito', {
-        autoClose: 1500,
-      });
+      toast.success('Producto agregado al carrito', {});
     } else {
-      toast.error('Este producto ya fue agregado', {
-        autoClose: 1500,
-      });
+      toast.error('Este producto ya fue agregado', {});
     }
   };
 
