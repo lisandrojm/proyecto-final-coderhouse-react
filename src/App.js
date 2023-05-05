@@ -11,7 +11,7 @@ import Home from './components/Home/Home';
 import NotFound from './components/NotFound/NotFound';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import { Toaster } from 'react-hot-toast';
+import ToastContainer from './components/ToastContainer/ToastContainer';
 
 const App = () => {
   return (
@@ -19,16 +19,7 @@ const App = () => {
       <BrowserRouter>
         <CartProvider>
           <NavBar />
-          <Toaster
-            position="top-right"
-            toastOptions={{
-              duration: 2000,
-              style: {
-                background: '#363636',
-                color: '#fff',
-              },
-            }}
-          />
+          <ToastContainer />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/products" element={<ItemListContainer greeting="Productos" />} />
