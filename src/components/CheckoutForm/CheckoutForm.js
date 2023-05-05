@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { toast } from 'react-toastify';
@@ -8,28 +8,6 @@ const CheckoutForm = ({ onConfirm }) => {
   const [phone, setPhone] = useState('');
   const [email, setEmail] = useState('');
   const [confirmEmail, setConfirmEmail] = useState('');
-
-  // Cargar datos guardados en localStorage al cargar el componente
-  useEffect(() => {
-    const savedData = JSON.parse(localStorage.getItem('checkoutData'));
-    if (savedData) {
-      setName(savedData.name);
-      setPhone(savedData.phone);
-      setEmail(savedData.email);
-      setConfirmEmail(savedData.confirmEmail);
-    }
-  }, []);
-
-  // Guardar datos en localStorage al actualizar los estados name, phone, email o confirmEmail
-  useEffect(() => {
-    const dataToSave = {
-      name,
-      phone,
-      email,
-      confirmEmail,
-    };
-    localStorage.setItem('checkoutData', JSON.stringify(dataToSave));
-  }, [name, phone, email, confirmEmail]);
 
   const handleConfirm = (event) => {
     event.preventDefault();
