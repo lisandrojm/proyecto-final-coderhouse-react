@@ -12,6 +12,10 @@
 
 ## Video Preview
 
+
+https://user-images.githubusercontent.com/35199683/236561144-2e3aa8b4-24c8-4e7e-9a46-b7d5e3a56ab5.mp4
+
+
 # Tabla de contenidos
 
 - [Acerca del Proyecto](#acerca-del-proyecto)
