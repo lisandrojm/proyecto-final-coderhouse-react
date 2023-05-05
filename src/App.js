@@ -11,7 +11,6 @@ import Checkout from './components/Checkout/Checkout';
 import Home from './components/Home/Home';
 import NotFound from './components/NotFound/NotFound';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import 'react-toastify/dist/ReactToastify.css';
 import './App.css';
 import { Toaster } from 'react-hot-toast';
 
