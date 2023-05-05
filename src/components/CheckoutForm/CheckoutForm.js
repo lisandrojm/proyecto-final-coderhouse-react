@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { toast } from 'react-toastify';
@@ -8,6 +8,25 @@ const CheckoutForm = ({ onConfirm }) => {
   const [phone, setPhone] = useState('');
   const [email, setEmail] = useState('');
   const [confirmEmail, setConfirmEmail] = useState('');
+
+  useEffect(() => {
+    const storedName = localStorage.getItem('name');
+    const storedPhone = localStorage.getItem('phone');
+    const storedEmail = localStorage.getItem('email');
+    const storedConfirmEmail = localStorage.getItem('confirmEmail');
+
+    if (storedName) setName(storedName);
+    if (storedPhone) setPhone(storedPhone);
+    if (storedEmail) setEmail(storedEmail);
+    if (storedConfirmEmail) setConfirmEmail(storedConfirmEmail);
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem('name', name);
+    localStorage.setItem('phone', phone);
+    localStorage.setItem('email', email);
+    localStorage.setItem('confirmEmail', confirmEmail);
+  }, [name, phone, email, confirmEmail]);
 
   const handleConfirm = (event) => {
     event.preventDefault();
