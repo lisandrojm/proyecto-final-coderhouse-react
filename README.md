@@ -19,7 +19,7 @@ https://user-images.githubusercontent.com/35199683/236561144-2e3aa8b4-24c8-4e7e-
 # Tabla de contenidos
 
 - [Acerca del Proyecto](#acerca-del-proyecto)
-- [Estructura del Proyecto.](#estructura-del-proyecto)
+- [Estructura del Proyecto](#estructura-del-proyecto)
 - [Tecnologías aplicadas](#tecnologías-aplicadas)
 - [Instalación](#instalación)
 
@@ -33,7 +33,7 @@ https://user-images.githubusercontent.com/35199683/236561144-2e3aa8b4-24c8-4e7e-
 - Durante el Checkout, al ingresar su nombre, teléfono e e-mail se activa el botón de "realizar compra".
 - Al clickear "realizar compra" se guarda en la base de datos (Firebase) una orden que tiene todos los productos, la fecha y se le da feedback al usuario del número de orden.
 
-## Estructura del Proyecto.
+## Estructura del Proyecto
 
 ### Inicio
 
