@@ -19,7 +19,7 @@ https://user-images.githubusercontent.com/35199683/236561144-2e3aa8b4-24c8-4e7e-
 # Tabla de contenidos
 
 - [Acerca del Proyecto](#acerca-del-proyecto)
-- [Estructura del Proyecto.](#estructura-del-proyecto)
+- [Estructura del Proyecto](#estructura-del-proyecto)
 - [Tecnologías aplicadas](#tecnologías-aplicadas)
 - [Instalación](#instalación)
 
