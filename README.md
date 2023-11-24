@@ -85,7 +85,7 @@ Debes tener instalado el siguiente software en tu sistema operativo:
 ### Clonar repositorio
 
 ```bash
-git clone https://github.com/lisandrojm/PFMartinez
+git clone https://github.com/lisandrojm/proyecto-final-martinez-coderhouse-react
 ```
 
 ### Instalar las dependencias
